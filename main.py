@@ -37,6 +37,9 @@ def main():
 
     # parse the arguments
     args = parser.parse_args()
+    
+    if args.image != img and args.image_name == img_name:
+        args.image_name = (args.image.split('/')[-1]).split('.')[0]
 
     sketch_image = cv.imread(args.image, 0)
     median_val = np.median(sketch_image)/255
