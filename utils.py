@@ -110,6 +110,8 @@ def random_sketch(path_dir: str) -> str:
 
     return res
 
+# get random image from the given directory
+
 
 def random_img(path_dir: str):
     '''This function will return a random image from the given directory.
