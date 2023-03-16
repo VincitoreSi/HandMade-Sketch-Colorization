@@ -8,10 +8,12 @@
 - Install the dependencies using `pip install -r requirements.txt`
 - Run the file `main.py` using `python3 main.py` optional flags to run the file are:
   - `-i` or `--input` for input image path
+  - `-o` or `--output` for output image path (default is `output`)
   - `-c` or `--color` for color map name choices are `cool`, `spring`, `summer`, `autumn`, `winter`, `rainbow`, `ocean` (default is `cool`)
   - `-t` or `--threshold` for threshold value for segmentation (default is `150` and should be in range `0-255`)
   - `-tt` or `--thresh_type` for threshold type for segmentation choices are `BINARY`, `BINARY_INV`, `TRUNC`, `TOZERO`, `TOZERO_INV` (default is `TOZERO_INV`)
   - `-s` or `--show` if show the output image (default is `True`)
+  - `-sv` or `--save` if save the output image (default is `True`)
   - `-h` or `--help` for help
 - Example: `python3 main.py -i data/flo.png -c winter -t 150 -s True`
 
