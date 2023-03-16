@@ -51,6 +51,10 @@ The results of the model are shown below:
     <td><img src="data/flo.png" alt="Sketch" style="width: 40vw;"/></td>
     <td><img src="output/flo/cool.jpg" alt="Colorized" style="width: 40vw;"/></td>
   </tr>
+  <tr>
+    <td><img src="data/cpl.jpg" alt="Sketch" style="width: 40vw;"/></td>
+    <td><img src="output/cpl/cool.jpg" alt="Colorized" style="width: 40vw;"/></td>
+  </tr>
 </table>
 
 ## References
