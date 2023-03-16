@@ -9,6 +9,7 @@ from dependencies import *
 
 # define a hyperparameter class and set a global variable color_maps as dictionary to it
 
+
 class Hyperparameters:
     '''This is a class for setting all the hyperparameters for the project. This class contains all the hyperparameters that are used in the project.'''
     # global variable color_maps as dictionary
