@@ -7,7 +7,7 @@ date: 2023-03-12
 
 from dependencies import *
 from utils import *
-from hyperparameters import Hyperparameters as hp
+from hyperparameters import Hyperparameters
 from sketch import SketchColor, SketchColorScratch
 
 # main function
@@ -29,7 +29,7 @@ def main():
     parser.add_argument('-tt', '--thresh_type', type=str,
                         default='TOZERO_INV', help='threshold type to be used')
     parser.add_argument('-c', '--color_map', type=str, default='cool',
-                        help='color map to be used to fill color (simple, rainbow, summer, spring, winter, autumn, ocean)')
+                        help='color map to be used to fill color (simple, rainbow, summer, spring, winter, autumn, ocean)', choices=Hyperparameters._COLOR_MAPS.keys())
     parser.add_argument('-s', '--show', type=bool, default=True,
                         help='Whether or not to show the images while creating the colorized version')
     parser.add_argument('-sv', '--save', type=bool, default=True,
