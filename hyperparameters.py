@@ -23,3 +23,9 @@ class Hyperparameters:
         'winter': [(0, 0, 255), (127, 0, 255), (255, 0, 255), (255, 0, 127), (255, 0, 0), (255, 127, 0), (255, 255, 0)],
         'cool': [(0, 255, 255), (0, 0, 255), (255, 0, 255), (255, 0, 0), (255, 255, 0), (0, 255, 0)]
     }
+    _thresh = 180
+    _thresh_type = 'TOZERO_INV'
+    _color_map = 'cool'
+    _show = True
+    _save = True
+    _save_path = 'output'

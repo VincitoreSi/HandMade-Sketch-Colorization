@@ -20,19 +20,19 @@ def main():
         'Colorize a grayscale sketch image using a pre-trained model')
     parser.add_argument('-i', '--image', type=str,
                         default=img, help='path to the image')
-    parser.add_argument('-o', '--output', type=str, default='output',
+    parser.add_argument('-o', '--output', type=str, default= Hyperparameters._save_path,
                         help='path to the folder where to save output')
     parser.add_argument('-n', '--image_name', type=str,
                         default=img_name, help='name of the image')
-    parser.add_argument('-t', '--thresh', type=int, default=180,
+    parser.add_argument('-t', '--thresh', type=int, default= Hyperparameters._thresh,
                         help='threshold to be used for segmentation purpose')
     parser.add_argument('-tt', '--thresh_type', type=str,
-                        default='TOZERO_INV', help='threshold type to be used')
-    parser.add_argument('-c', '--color_map', type=str, default='cool',
+                        default= Hyperparameters._thresh_type, help='threshold type to be used')
+    parser.add_argument('-c', '--color_map', type=str, default= Hyperparameters._color_map,
                         help='color map to be used to fill color (simple, rainbow, summer, spring, winter, autumn, ocean)', choices=Hyperparameters._COLOR_MAPS.keys())
-    parser.add_argument('-s', '--show', type=bool, default=True,
+    parser.add_argument('-s', '--show', type=bool, default= Hyperparameters._show,
                         help='Whether or not to show the images while creating the colorized version')
-    parser.add_argument('-sv', '--save', type=bool, default=True,
+    parser.add_argument('-sv', '--save', type=bool, default= Hyperparameters._save,
                         help='Whether to save the output or not')
 
     # parse the arguments
