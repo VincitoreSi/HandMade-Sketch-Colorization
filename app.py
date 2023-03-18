@@ -26,19 +26,21 @@ with st.container():
 
     image_name = st.text_input("Enter the name of the image", "sketch")
     st.write("<br>", unsafe_allow_html=True)
-    st.write("----------------------------------------------------------------------------------")
-    
+    st.write(
+        "----------------------------------------------------------------------------------")
+
 with st.container():
     st.subheader("Hyperparameters Section")
     thresh = st.slider("Threshold", 0, 255, 150)
     thresh_type = st.selectbox("Threshold Type", [
-                            "TOZERO_INV", "BINARY", "BINARY_INV", "TRUNC", "TOZERO"], index=0)
+        "TOZERO_INV", "BINARY", "BINARY_INV", "TRUNC", "TOZERO"], index=0)
     color_map = st.selectbox(
         "Color Map", Hyperparameters._COLOR_MAPS.keys(), index=7)
-    
+
     st.write("<br>", unsafe_allow_html=True)
-    st.write("----------------------------------------------------------------------------------")
-    
+    st.write(
+        "----------------------------------------------------------------------------------")
+
 with st.container():
     st.subheader("Output Section")
     if image is not None and image_name != "sketch":
@@ -76,11 +78,12 @@ with st.container():
             st.image(image, caption='Uploaded Image', use_column_width=True)
         with col2:
             st.image(colorized_sketch,
-                    caption=f"Colorized image in {end_time-start_time:.2f} seconds", use_column_width=True)
+                     caption=f"Colorized image in {end_time-start_time:.2f} seconds", use_column_width=True)
 
         colorized_bytes = cv.imencode('.jpg', colorized_sketch)[1].tobytes()
         st.write("<br>", unsafe_allow_html=True)
-        st.write("----------------------------------------------------------------------------------")
+        st.write(
+            "----------------------------------------------------------------------------------")
         # Download button for the colorized image
         st.download_button(
             label="Download Colorized Image",
@@ -88,4 +91,5 @@ with st.container():
             file_name=f"{image_name}_colorized.jpg",
             mime="image/jpeg"
         )
-        st.write("----------------------------------------------------------------------------------")
+        st.write(
+            "----------------------------------------------------------------------------------")
